@@ -231,7 +231,8 @@ p {
 }
 
 .products__link {
-    display: inline-block;
+    display: block;
+    width: fit-content;
     margin: 0 auto;
     text-align: center;
     color: #255530;
@@ -440,4 +441,239 @@ p {
 
 .footer__social-icon:hover {
     opacity: 1;
+}
+
+/* МЕДИАЗАПРОСЫ */
+
+/* меньше 1200px */
+@media (max-width: 1199px) {
+    .hero__title {
+        font-size: 2.25rem;
+    }
+    
+    .about__title {
+        font-size: 1.875rem;
+    }
+    
+    .features__item {
+        padding: 1.25rem;
+    }
+}
+
+/* меньше 992px */
+@media (max-width: 991px) {
+    .hero {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        padding: 3rem 2rem;
+    }
+    
+    .hero__image {
+        position: relative;
+        right: auto;
+        top: auto;
+        transform: none;
+        max-width: 100%;
+        margin-top: 2rem;
+        order: 1;
+    }
+    
+    .hero__content {
+        order: 2;
+    }
+    
+    .about {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about__title {
+        max-width: none;
+        margin-bottom: 1.5rem;
+    }
+    
+    .about__text {
+        max-width: none;
+        margin-bottom: 1.5rem;
+    }
+    
+    .about__image {
+        position: relative;
+        right: auto;
+        top: auto;
+        transform: none;
+        max-width: 100%;
+        margin-top: 2rem;
+        order: 1;
+    }
+    
+    .about__content {
+        order: 2;
+    }
+    
+    .hero__title,
+    .hero__text {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .features__list {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* меньше 768px */
+@media (max-width: 767px) {
+    .header {
+        padding: 1rem;
+    }
+    
+    .nav__list {
+        flex-wrap: wrap;
+        gap: 1rem;
+        justify-content: center;
+    }
+    
+    .nav__link {
+        font-size: 0.9rem;
+        padding: 0.4rem 0.8rem;
+    }
+    
+    .hero__title {
+        font-size: 2rem;
+    }
+    
+    .features__list {
+        grid-template-columns: 1fr;
+    }
+    
+    .products__grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+    
+    .newsletter__form {
+        flex-direction: column;
+        max-width: 400px;
+    }
+    
+    .newsletter__input,
+    .newsletter__button {
+        width: 100%;
+    }
+    
+    .footer__content {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .footer__form {
+        flex-direction: column;
+    }
+}
+
+/* меньше 576px */
+@media (max-width: 575px) {
+    .header__top {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .header__icons {
+        gap: 2rem;
+    }
+    
+    .nav__list {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.5rem;
+    }
+    
+    .nav__item {
+        width: 100%;
+        text-align: center;
+    }
+    
+    .nav__link {
+        display: block;
+        width: 100%;
+        max-width: 250px;
+        margin: 0 auto;
+    }
+    
+    .hero,
+    .features,
+    .products,
+    .newsletter,
+    .about {
+        padding: 2rem 1rem;
+    }
+    
+    .hero__title {
+        font-size: 1.75rem;
+    }
+    
+    .features__title,
+    .products__title,
+    .newsletter__title,
+    .about__title {
+        font-size: 1.5rem;
+    }
+    
+    .products__grid {
+        grid-template-columns: 1fr;
+        max-width: 300px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .footer__content {
+        grid-template-columns: 1fr;
+    }
+    
+    .footer__bottom {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+    }
+    
+    .footer__form {
+        flex-direction: column;
+    }
+    
+    .footer__input,
+    .footer__button {
+        width: 100%;
+    }
+}
+
+/* меньше 400px */
+@media (max-width: 399px) {
+    .hero__title {
+        font-size: 1.5rem;
+    }
+    
+    .features__title,
+    .products__title,
+    .newsletter__title,
+    .about__title {
+        font-size: 1.3rem;
+    }
+    
+    h3 {
+        font-size: 1.1rem;
+    }
+    
+    .hero__link,
+    .products__link,
+    .about__link,
+    .newsletter__button {
+        padding: 0.6rem 1.2rem;
+        font-size: 0.9rem;
+    }
+    
+    .features__icon {
+        width: 40px;
+        height: 40px;
+    }
 }
