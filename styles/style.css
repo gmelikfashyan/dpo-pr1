@@ -23,6 +23,7 @@ body {
     line-height: 1.6;
     color: var(--text-color);
     background-color: #fff;
+    overflow-x: hidden;
 }
 
 h2 {
@@ -309,6 +310,10 @@ p {
     box-shadow: 0 10px 20px rgba(0,0,0,0.1);
 }
 
+.product-card:active {
+    transform: scale(0.98);
+}
+
 .product-card__image {
     width: 100%;
     height: 200px;
@@ -326,7 +331,9 @@ p {
 }
 
 .products__link {
-    display: block;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     width: fit-content;
     margin: 0 auto;
     text-align: center;
@@ -338,8 +345,10 @@ p {
     border-radius: 6px;
     transition: var(--transition);
     min-height: 44px;
-    display: inline-flex;
-    align-items: center;
+}
+
+.products__link:active {
+    transform: scale(0.98);
 }
 
 .products__link:hover {
