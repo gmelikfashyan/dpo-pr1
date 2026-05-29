@@ -6,26 +6,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Avion</title>
     <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="src/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/mobile.css" media="screen and (max-width: 1024px)">
 </head>
 
 <body>
-    <!-- ===== Header ===== -->
-    <header class="header">
+    <header class="header" id="top">
         <div class="header__top">
             <img class="header__icon" src="assets/icons/Search.png" alt="Поиск">
+
             <a class="header__logo" href="#">
                 <img class="header__logo-img" src="assets/Лого.png" alt="Avion">
             </a>
+
             <div class="header__icons">
                 <img class="header__icon" src="assets/icons/User--avatar.png" alt="Личный кабинет">
                 <img class="header__icon" src="assets/icons/Shopping--cart.png" alt="Корзина">
             </div>
-        </div>
 
-        <nav class="nav">
+            <button class="menu-toggle" id="menuToggle" aria-label="Открыть меню" aria-expanded="false">
+                <span class="menu-toggle__line"></span>
+                <span class="menu-toggle__line"></span>
+                <span class="menu-toggle__line"></span>
+            </button>
+        </div>
+        <nav class="nav" id="mainNav">
             <ul class="nav__list">
+                <li class="nav__item"><a class="nav__link active" href="#home">Главная</a></li>
                 <li class="nav__item"><a class="nav__link" href="#products">Кашпо для растений</a></li>
                 <li class="nav__item"><a class="nav__link" href="#ceramics">Керамика</a></li>
                 <li class="nav__item"><a class="nav__link" href="#tables">Столы</a></li>
@@ -36,9 +44,7 @@
         </nav>
     </header>
 
-    <!-- Main -->
     <main>
-        <!-- Hero Section -->
         <section class="hero" id="home">
             <h2 class="hero__title">Мебельный бренд будущего с вне­временным дизайном</h2>
             <a class="hero__link" href="#products">Смотреть коллекцию</a>
@@ -47,11 +53,10 @@
                 люксовым розничным брендом.
             </p>
             <aside class="hero__image">
-                <img class="hero__image-img" src="assets/img/Right-Image.png" alt="Черный матовый стул">
+                <img class="hero__image-img" src="assets/img/Right Image.png" alt="Черный матовый стул">
             </aside>
         </section>
 
-        <!-- Features Section -->
         <section class="features" id="features">
             <h2 class="features__title">Что отличает наш бренд</h2>
             <ul class="features__list">
@@ -78,7 +83,6 @@
             </ul>
         </section>
 
-        <!-- New Ceramics Section -->
         <section class="products" id="ceramics">
             <h2 class="products__title">Новая керамика</h2>
             <div class="products__grid">
@@ -114,7 +118,6 @@
             <a class="products__link" href="#ceramics">Смотреть коллекцию</a>
         </section>
 
-        <!-- Popular Products Section -->
         <section class="products products--popular" id="products">
             <h2 class="products__title">Популярные товары</h2>
             <div class="products__grid">
@@ -143,7 +146,6 @@
             <a class="products__link" href="#products">Смотреть коллекцию</a>
         </section>
 
-        <!-- Newsletter Section -->
         <section class="newsletter" id="subscribe">
             <h2 class="newsletter__title">Присоединяйтесь к клубу и получите преимущества</h2>
             <p class="newsletter__text">
@@ -157,7 +159,6 @@
             </form>
         </section>
 
-        <!-- About Section -->
         <section class="about" id="about">
             <h2 class="about__title">От студии в Лондоне до мирового бренда</h2>
             <p class="about__text">
@@ -177,7 +178,6 @@
         </section>
     </main>
 
-    <!-- Footer -->
     <footer class="footer">
         <div class="footer__content">
             <nav class="footer__nav">
@@ -199,7 +199,6 @@
                     <li class="footer__item"><a class="footer__link" href="#home">Товары для дома</a></li>
                     <li class="footer__item"><a class="footer__link" href="#pots">Кашпо для растений</a></li>
                     <li class="footer__item"><a class="footer__link" href="#chairs">Стулья</a></li>
-                    <li class="footer__item"><a class="footer__link" href="#dishes">Посуда</a></li>
                 </ul>
             </section>
 
@@ -234,6 +233,10 @@
             </div>
         </div>
     </footer>
+
+    <button class="scroll-top" id="scrollTop" aria-label="Наверх">&#8679;</button>
+
+    <script src="scripts/menu.js"></script>
 </body>
 
 </html>
